@@ -1,0 +1,19 @@
+//Leia um número e faça um programa que coloque esse número na primeira posição de um array N[10]. 
+//Em cada posição subsequente, coloque o dobro da posição anterior. 
+//Por exemplo, se o número de entrada for 1, os números da matriz devem ser 1,2,4,8 e assim por diante.
+
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    int v = int.Parse(Console.ReadLine());
+    int[] n = new int[10];
+    n[0] = v;
+    for (int i = 1; i < 10; i++) {
+        n[i] = n[i-1] * 2;
+    }
+    for (int i = 0; i < 10; i++) {
+        Console.WriteLine("N["+i+"] = "+n[i]);
+    }
+  }
+}
