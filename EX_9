@@ -1,0 +1,23 @@
+//Despertador
+
+using System;
+
+class MainClass {
+    public static void Main (string[] args) {
+        while (true) {
+            string[] input = Console.ReadLine().Split(' ');
+            int h1 = int.Parse(input[0]);
+            int m1 = int.Parse(input[1]);
+            int h2 = int.Parse(input[2]);
+            int m2 = int.Parse(input[3]);
+            if (h1 == 0 && m1 == 0 && h2 == 0 && m2 == 0) {
+                break;
+            }
+            int minutos = (h2 * 60 + m2) - (h1 * 60 + m1);
+            if (minutos <= 0) {
+                minutos += 1440;
+            }
+            Console.WriteLine(minutos);
+        }
+    }
+}
