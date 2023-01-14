@@ -1,0 +1,35 @@
+//Faça um algoritmo que leia a altura e a matricula de dez aluno
+//Mostre a matricula do aluno mais alto e do aluno mais baixo
+
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    double[] alturas = new double[10];
+    int[] matriculas = new int[10];
+    double alturaMaior = 0;
+    double alturaMenor = double.MaxValue;
+    int matriculaMaior = 0;
+    int matriculaMenor = 0;
+
+    for (int i = 0; i < 10; i++) {
+      Console.WriteLine("Digite a matrícula do aluno " + (i+1) + ":");
+      matriculas[i] = int.Parse(Console.ReadLine());
+      Console.WriteLine("Digite a altura do aluno " + (i+1) + ":");
+      alturas[i] = double.Parse(Console.ReadLine());
+
+      if (alturas[i] > alturaMaior) {
+        alturaMaior = alturas[i];
+        matriculaMaior = matriculas[i];
+      }
+
+      if (alturas[i] < alturaMenor) {
+        alturaMenor = alturas[i];
+        matriculaMenor = matriculas[i];
+      }
+    }
+
+    Console.WriteLine("A matrícula do aluno mais alto é " + matriculaMaior + " com " + alturaMaior + " metros de altura.");
+    Console.WriteLine("A matrícula do aluno mais baixo é " + matriculaMenor + " com " + alturaMenor + " metros de altura.");
+  }
+}
