@@ -1,0 +1,21 @@
+//Faça um algoritmo que exiba quantas pessoas possuem mais de 18 anos. O algoritmo deverá ler a idade de 10 pessoas.
+
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    int[] idades = new int[10];
+    int contador = 0;
+
+    for (int i = 0; i < 10; i++) {
+      Console.WriteLine("Digite a idade da pessoa " + (i+1) + ":");
+      idades[i] = int.Parse(Console.ReadLine());
+
+      if (idades[i] > 18) {
+        contador++;
+      }
+    }
+
+    Console.WriteLine("Quantidade de pessoas com mais de 18 anos: " + contador);
+  }
+}
