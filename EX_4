@@ -1,0 +1,24 @@
+//algoritmo que calcule e exiba o salário reajustado de dez funcionários de acordo com a 
+//seguinte regra: Salário até 300, reajuste de 50%; Salários maiores que 300, reajuste de 30%
+
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    double[] salarios = new double[10];
+    double novoSalario;
+
+    for (int i = 0; i < 10; i++) {
+      Console.WriteLine("Digite o salário do funcionário " + (i+1) + ":");
+      salarios[i] = double.Parse(Console.ReadLine());
+
+      if (salarios[i] <= 300) {
+        novoSalario = salarios[i] + (salarios[i] * 0.5);
+      } else {
+        novoSalario = salarios[i] + (salarios[i] * 0.3);
+      }
+
+      Console.WriteLine("O novo salário do funcionário " + (i+1) + " é " + novoSalario);
+    }
+  }
+}
