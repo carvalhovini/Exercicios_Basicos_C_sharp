@@ -1,0 +1,15 @@
+//um programa que leia um inteiro N. N * 2 linhas devem ser impressas por este programa de acordo com o exemplo abaixo.
+//Para números com mais de 6 dígitos, todos os dígitos devem ser impressos (não é permitida notação científica).
+
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    int n = int.Parse(Console.ReadLine());
+
+    for (int i = 1; i <= n; i++) {
+        Console.WriteLine(i + " " + (i * i) + " " + (i * i * i));
+        Console.WriteLine(i + " " + (i * i + 1) + " " + (i * i * i + 1));
+    }
+  }
+}
